@@ -3,25 +3,35 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucasyaiche <lucasyaiche@student.42.fr>    +#+  +:+       +#+        */
+/*   By: lyaiche <lyaiche@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 14:25:18 by lyaiche           #+#    #+#             */
-/*   Updated: 2021/10/07 13:54:07 by lucasyaiche      ###   ########.fr       */
+/*   Updated: 2021/10/11 12:22:09 by lyaiche          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-void	*memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	int		count;
-	char	*temp;
+	unsigned char	*src2;
+	unsigned char	*dest2;
 
-	count = 0;
-	while (n > count)
+	src2 = (unsigned char *)src;
+	dest2 = (unsigned char *)dest;
+	if (!src2 && !dest2)
+		return (NULL);
+	if ((src2 < dest2) && dest2 < src2 + n)
 	{
-		((unsigned char *)src)[count] = ((unsigned char *)dest)[count];
-		count++;
+		src2 += n;
+		dest2 += n;
+		while (n > 0)
+			*--dest2 = *--src2;
+	}
+	else
+	{
+		while (n-- > 0)
+			*dest2++ = *src2++;
 	}
 	return (dest);
 }
