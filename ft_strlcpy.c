@@ -6,21 +6,11 @@
 /*   By: lyaiche <lyaiche@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 12:18:43 by lyaiche           #+#    #+#             */
-/*   Updated: 2021/10/06 16:22:53 by lyaiche          ###   ########.fr       */
+/*   Updated: 2021/10/14 16:40:11 by lyaiche          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-int	ft_strlen(const char *str)
-{
-	int	len;
-
-	len = 0;
-	while (str[len])
-		len++;
-	return (len);
-}
+#include "libft.h"
 
 size_t	strlcpy(char *dst, const char *src, size_t dstsize)
 {

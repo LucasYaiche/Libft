@@ -6,15 +6,15 @@
 /*   By: lyaiche <lyaiche@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 14:10:30 by lyaiche           #+#    #+#             */
-/*   Updated: 2021/10/05 14:11:31 by lyaiche          ###   ########.fr       */
+/*   Updated: 2021/10/14 16:36:20 by lyaiche          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 void	*ft_bzero(void *s, size_t n)
 {
-	int	count;
+	size_t	count;
 
 	count = 0;
 	while (n > count)

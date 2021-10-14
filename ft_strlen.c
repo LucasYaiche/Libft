@@ -6,9 +6,11 @@
 /*   By: lyaiche <lyaiche@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 15:43:40 by lucasyaiche       #+#    #+#             */
-/*   Updated: 2021/10/05 14:08:46 by lyaiche          ###   ########.fr       */
+/*   Updated: 2021/10/14 16:38:04 by lyaiche          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_strlen(const char *str)
 {

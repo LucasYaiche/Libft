@@ -6,13 +6,13 @@
 /*   By: lyaiche <lyaiche@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 15:35:24 by lyaiche           #+#    #+#             */
-/*   Updated: 2021/10/11 16:28:38 by lyaiche          ###   ########.fr       */
+/*   Updated: 2021/10/14 16:40:48 by lyaiche          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-char	*get(int len)
+static char	*get(int len)
 {
 	char	*str;
 
@@ -20,16 +20,6 @@ char	*get(int len)
 	if (!str)
 		return (0);
 	return (str);
-}
-
-int	ft_strlen(const char *str)
-{
-	int	len;
-
-	len = 0;
-	while (str[len])
-		len++;
-	return (len);
 }
 
 char	*ft_strdup(const char	*s)

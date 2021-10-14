@@ -6,9 +6,11 @@
 /*   By: lyaiche <lyaiche@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 18:47:45 by lucasyaiche       #+#    #+#             */
-/*   Updated: 2021/10/06 16:03:30 by lyaiche          ###   ########.fr       */
+/*   Updated: 2021/10/14 16:37:07 by lyaiche          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isprint(int str)
 {

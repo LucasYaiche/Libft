@@ -6,11 +6,11 @@
 /*   By: lyaiche <lyaiche@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 14:25:18 by lyaiche           #+#    #+#             */
-/*   Updated: 2021/10/11 12:22:09 by lyaiche          ###   ########.fr       */
+/*   Updated: 2021/10/14 16:37:26 by lyaiche          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

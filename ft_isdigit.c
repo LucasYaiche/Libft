@@ -6,11 +6,11 @@
 /*   By: lyaiche <lyaiche@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 14:40:15 by lucasyaiche       #+#    #+#             */
-/*   Updated: 2021/10/06 16:03:55 by lyaiche          ###   ########.fr       */
+/*   Updated: 2021/10/14 16:37:03 by lyaiche          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_isdigit(int str)
 {

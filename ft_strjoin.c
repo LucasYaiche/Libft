@@ -1,34 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lyaiche <lyaiche@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/10 19:47:23 by lucasyaiche       #+#    #+#             */
-/*   Updated: 2021/10/14 16:37:21 by lyaiche          ###   ########.fr       */
+/*   Created: 2021/10/14 12:20:03 by lyaiche           #+#    #+#             */
+/*   Updated: 2021/10/14 16:40:28 by lyaiche          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	memcmp(const void *s1, const void *s2, size_t n)
+static char	*get(size_t len)
 {
-	unsigned char	*x;
-	unsigned char	*y;
+	char	*returned;
 
-	x = (unsigned char *)s1;
-	y = (unsigned char *)s2;
-	if (n != 0)
-	{
-		while (x && n && (x == y))
-		{
-			x++;
-			y++;
-			n--;
-		}
-	}
-	if (n == 0)
+	returned = malloc(sizeof(*returned) * (len));
+	if (!returned)
 		return (0);
-	return (*x - *y);
+	return (returned);
+}
+
+char	*strjoin(char const *s1, char const *s2)
+{
+	char	*answer;
+	char	*returned;
+
+	answer = get(ft_strlen(s1) + ft_strlen(s2));
+	returned = answer;
+	if (!answer)
+		return (NULL);
+	while (*s1)
+		*answer++ = *s1++;
+	while (*s2)
+		*answer++ = *s2++;
+	return (returned);
 }

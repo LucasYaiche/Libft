@@ -6,9 +6,11 @@
 /*   By: lyaiche <lyaiche@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 14:53:30 by lyaiche           #+#    #+#             */
-/*   Updated: 2021/10/11 15:33:22 by lyaiche          ###   ########.fr       */
+/*   Updated: 2021/10/14 16:35:39 by lyaiche          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_atoi(const char *num)
 {
