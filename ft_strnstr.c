@@ -6,13 +6,13 @@
 /*   By: lyaiche <lyaiche@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 13:37:29 by lyaiche           #+#    #+#             */
-/*   Updated: 2021/10/14 16:38:12 by lyaiche          ###   ########.fr       */
+/*   Updated: 2021/10/16 13:39:18 by lyaiche          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strnstr(const char *s1, const char *s2, size_t n)
+char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
 	size_t	j;

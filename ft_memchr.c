@@ -6,7 +6,7 @@
 /*   By: lyaiche <lyaiche@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 13:32:50 by lucasyaiche       #+#    #+#             */
-/*   Updated: 2021/10/14 16:37:16 by lyaiche          ###   ########.fr       */
+/*   Updated: 2021/10/16 15:02:27 by lyaiche          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,12 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	if (n != 0)
 	{	
 		t = (unsigned char *)s;
-		while (n-- != 0)
+		while (n > 0)
 		{
-			if (*t++ == ((unsigned char) c))
+			if (*t == ((unsigned char) c))
 				return (t);
+			t++;
+			n--;
 		}
 	}
 	return (0);

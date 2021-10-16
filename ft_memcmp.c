@@ -6,22 +6,22 @@
 /*   By: lyaiche <lyaiche@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/10 19:47:23 by lucasyaiche       #+#    #+#             */
-/*   Updated: 2021/10/14 16:37:21 by lyaiche          ###   ########.fr       */
+/*   Updated: 2021/10/16 14:48:34 by lyaiche          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	memcmp(const void *s1, const void *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned char	*x;
-	unsigned char	*y;
+	const unsigned char	*x;
+	const unsigned char	*y;
 
 	x = (unsigned char *)s1;
 	y = (unsigned char *)s2;
 	if (n != 0)
 	{
-		while (x && n && (x == y))
+		while (x && n && y && (*x == *y))
 		{
 			x++;
 			y++;
