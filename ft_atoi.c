@@ -6,7 +6,7 @@
 /*   By: lyaiche <lyaiche@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 14:53:30 by lyaiche           #+#    #+#             */
-/*   Updated: 2021/10/18 17:09:29 by lyaiche          ###   ########.fr       */
+/*   Updated: 2021/10/18 17:21:50 by lyaiche          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ int	ft_atoi(const char *num)
 
 	answer = 0;
 	negative = 1;
-	while (*num == ' ')
+	while (*num == ' ' || *num == '\n' || *num == '\t' || *num == '\v'
+		|| *num == '\f' || *num == '\r')
 		num++;
 	if (*num == '-' || *num == '+')
 	{

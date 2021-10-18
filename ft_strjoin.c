@@ -6,7 +6,7 @@
 /*   By: lyaiche <lyaiche@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 12:20:03 by lyaiche           #+#    #+#             */
-/*   Updated: 2021/10/14 16:40:28 by lyaiche          ###   ########.fr       */
+/*   Updated: 2021/10/18 17:28:10 by lyaiche          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static char	*get(size_t len)
 	return (returned);
 }
 
-char	*strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*answer;
 	char	*returned;
