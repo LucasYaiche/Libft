@@ -6,7 +6,7 @@
 /*   By: lyaiche <lyaiche@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 12:18:43 by lyaiche           #+#    #+#             */
-/*   Updated: 2021/10/16 13:38:33 by lyaiche          ###   ########.fr       */
+/*   Updated: 2021/10/18 11:33:45 by lyaiche          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,17 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
+	size_t	i;
+
+	i = 0;
+	if (!dstsize)
+		return (ft_strlen(src));
 	dstsize -= 1;
-	if (dstsize >= 0)
+	while (src[i] && i < dstsize)
 	{
-		while (dstsize--)
-		{
-			*dst++ = *src++;
-		}
-		*dst = '\0';
+		dst[i] = src[i];
+		i++;
 	}
+	dst[i] = '\0';
 	return (ft_strlen(src));
 }

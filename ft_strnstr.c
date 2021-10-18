@@ -6,7 +6,7 @@
 /*   By: lyaiche <lyaiche@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 13:37:29 by lyaiche           #+#    #+#             */
-/*   Updated: 2021/10/16 13:39:18 by lyaiche          ###   ########.fr       */
+/*   Updated: 2021/10/18 16:12:51 by lyaiche          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 	while (s1[i] != '\0' && i < n)
 	{
 		j = 0;
-		while (s2[j] != '\0')
+		while (s2[j] != '\0' && (i + j) < n)
 		{
 			if (s1[i + j] != s2[j])
 				break ;
