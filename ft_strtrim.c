@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lyaiche <lyaiche@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lucasyaiche <lucasyaiche@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 12:36:43 by lyaiche           #+#    #+#             */
-/*   Updated: 2021/10/14 16:39:47 by lyaiche          ###   ########.fr       */
+/*   Updated: 2021/10/19 17:43:50 by lucasyaiche      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,14 +36,26 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*answer;
 	char	*returned;
+	size_t	i;
+	size_t	len;
 
-	answer = get(ft_strlen(s1));
-	returned = answer;
-	while (*s1)
+	i = 0;
+	len = 0;
+	while (s1[i])
 	{
-		if (!(ft_check(*s1, set)))
-			*answer++ = *s1;
-		s1++;
+		if (!(ft_check(s1[i], set)))
+			len++;
+		i++;
 	}
+	answer = get(len);
+	returned = answer;
+	i = 0;
+	while (s1[i])
+	{
+		if (!(ft_check(s1[i], set)))
+			*answer++ = s1[i];
+		i++;
+	}
+	*answer++ = '\0';
 	return (returned);
 }

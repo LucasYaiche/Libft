@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lyaiche <lyaiche@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lucasyaiche <lucasyaiche@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 14:30:02 by lucasyaiche       #+#    #+#             */
-/*   Updated: 2021/10/14 16:39:17 by lyaiche          ###   ########.fr       */
+/*   Updated: 2021/10/19 16:06:12 by lucasyaiche      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static char	*get(size_t len)
 {
 	char	*returned;
 
-	returned = malloc(sizeof(*returned) * (len));
+	returned = malloc(sizeof(*returned) * (len + 1));
 	if (!returned)
 		return (0);
 	return (returned);
@@ -25,15 +25,24 @@ static char	*get(size_t len)
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*answer;
-	int		i;
+	size_t	i;
+	size_t	j;
 
-	i = 0;
+	if (ft_strlen(s) - 1 < start)
+		return (ft_strdup(""));
+	if (ft_strlen(s) - start - 1 < len)
+		len = ft_strlen(s) - start;
 	answer = get(len);
-	if (!answer)
+	if (!answer || !s)
 		return (NULL);
-	while (answer)
+	i = 0;
+	j = 0;
+	while (s[i])
 	{
-		*answer++ = s[start + i++];
+		if (i >= start && j < len)
+			answer[j++] = s[i];
+		i++;
 	}
+	answer[j] = 0;
 	return (answer);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lyaiche <lyaiche@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lucasyaiche <lucasyaiche@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 12:20:03 by lyaiche           #+#    #+#             */
-/*   Updated: 2021/10/18 17:28:10 by lyaiche          ###   ########.fr       */
+/*   Updated: 2021/10/19 17:23:32 by lucasyaiche      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static char	*get(size_t len)
 {
 	char	*returned;
 
-	returned = malloc(sizeof(*returned) * (len));
+	returned = malloc(sizeof(*returned) * (len + 1));
 	if (!returned)
 		return (0);
 	return (returned);
@@ -35,5 +35,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		*answer++ = *s1++;
 	while (*s2)
 		*answer++ = *s2++;
+	*answer = '\0';
 	return (returned);
 }
