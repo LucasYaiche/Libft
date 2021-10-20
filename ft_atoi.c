@@ -6,7 +6,7 @@
 /*   By: lyaiche <lyaiche@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 14:53:30 by lyaiche           #+#    #+#             */
-/*   Updated: 2021/10/18 17:21:50 by lyaiche          ###   ########.fr       */
+/*   Updated: 2021/10/20 11:58:03 by lyaiche          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	ft_atoi(const char *num)
 }
 /*
 int main() {
-  const char *str = "++42";
+  const char *str = "-99999999999999999999";
   printf("%d\n", ft_atoi(str));
   printf("%d\n", atoi(str));
   return 0;
