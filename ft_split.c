@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucasyaiche <lucasyaiche@student.42.fr>    +#+  +:+       +#+        */
+/*   By: lyaiche <lyaiche@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 13:31:20 by lyaiche           #+#    #+#             */
-/*   Updated: 2021/10/19 19:13:55 by lucasyaiche      ###   ########.fr       */
+/*   Updated: 2021/10/21 13:09:44 by lyaiche          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,11 @@ static char	**fill_matrix(char const *str, char compared, char **result,
 			word_len++;
 		result[i] = malloc(sizeof(char) * (word_len + 1));
 		if (!result[i])
+		{
+			while (result[i])
+				free(result[--i]);
 			return (NULL);
+		}
 		ft_strncpy(result[i], &str[j], word_len);
 		j += word_len;
 		i++;
@@ -86,6 +90,8 @@ char	**ft_split(const char *s, char c)
 	char			**result;
 	unsigned int	nb_words;
 
+	if (!s)
+		return (NULL);
 	nb_words = count(s, c);
 	result = malloc(sizeof(char *) * (nb_words + 1));
 	if (!result)

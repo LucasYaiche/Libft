@@ -6,7 +6,7 @@
 /*   By: lyaiche <lyaiche@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 19:30:31 by lucasyaiche       #+#    #+#             */
-/*   Updated: 2021/10/20 16:09:49 by lyaiche          ###   ########.fr       */
+/*   Updated: 2021/10/21 15:18:15 by lyaiche          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ static size_t	get_len(int n)
 
 void	ft_putnbr(char *answer, int nb, size_t len)
 {
+	answer[get_len(nb)] = '\0';
 	while (nb > 0)
 	{
 		answer[len--] = nb % 10 + '0';
@@ -53,7 +54,7 @@ char	*ft_itoa(int n)
 	negative = 1;
 	if (n == 0)
 		return (ft_strdup("0"));
-	if (n == -2147483648)
+	else if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
 	if (n < 0)
 	{
@@ -62,13 +63,13 @@ char	*ft_itoa(int n)
 	}
 	if (negative < 0)
 		answer = get(get_len(n) + 1);
-	answer = get(get_len(n));
+	else
+		answer = get(get_len(n));
 	if (!answer)
 		return (NULL);
 	returned = answer;
 	if (negative < 0)
 		*answer++ = '-';
 	ft_putnbr(answer, n, get_len(n) - 1);
-	answer[get_len(n)] = '\0';
 	return (returned);
 }

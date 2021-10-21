@@ -6,13 +6,13 @@
 /*   By: lyaiche <lyaiche@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 15:35:24 by lyaiche           #+#    #+#             */
-/*   Updated: 2021/10/14 16:40:48 by lyaiche          ###   ########.fr       */
+/*   Updated: 2021/10/21 18:26:33 by lyaiche          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*get(int len)
+static char	*get(size_t len)
 {
 	char	*str;
 
@@ -24,9 +24,9 @@ static char	*get(int len)
 
 char	*ft_strdup(const char	*s)
 {
-	int		len;
-	char	*s2;
-	int		i;
+	size_t			len;
+	char			*s2;
+	size_t			i;
 
 	len = ft_strlen(s);
 	i = 0;

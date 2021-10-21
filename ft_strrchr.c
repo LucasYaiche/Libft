@@ -6,7 +6,7 @@
 /*   By: lyaiche <lyaiche@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/21 22:24:17 by ntom              #+#    #+#             */
-/*   Updated: 2021/10/16 15:49:32 by lyaiche          ###   ########.fr       */
+/*   Updated: 2021/10/21 18:02:38 by lyaiche          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ char	*ft_strrchr(const char *s, int c)
 	const char	*str;
 
 	str = s;
-	if (!*s)
-		return (NULL);
 	while (*s++)
 		if (*s == (char)c)
 			str = s;

@@ -6,11 +6,23 @@
 /*   By: lyaiche <lyaiche@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 14:53:30 by lyaiche           #+#    #+#             */
-/*   Updated: 2021/10/20 11:58:03 by lyaiche          ###   ########.fr       */
+/*   Updated: 2021/10/21 15:11:35 by lyaiche          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static int	test(long long nb, const char *str, int sign)
+{
+	long long	limit;
+
+	limit = (nb * 10 + *str - 48 ) * sign;
+	if (limit < -2147483648)
+		return (0);
+	else if (limit > 2147483647)
+		return (-1);
+	return (1);
+}
 
 int	ft_atoi(const char *num)
 {
@@ -30,6 +42,10 @@ int	ft_atoi(const char *num)
 	}
 	while (*num >= 48 && *num <= 57)
 	{
+		if (!test(answer, num, negative))
+			return (0);
+		else if (test(answer, num, negative) == -1)
+			return (-1);
 		answer = answer * 10 + (*num - 48);
 		num++;
 	}

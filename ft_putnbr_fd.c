@@ -6,7 +6,7 @@
 /*   By: lyaiche <lyaiche@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 17:10:40 by lyaiche           #+#    #+#             */
-/*   Updated: 2021/10/20 17:21:56 by lyaiche          ###   ########.fr       */
+/*   Updated: 2021/10/21 17:52:58 by lyaiche          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,10 @@ void	ft_putnbr_fd(int n, int fd)
 	char	written;
 
 	if (n == -2147483648)
-		write(fd, "-2147483648", 12);
+	{
+		write(fd, "-2147483648", 11);
+		return ;
+	}
 	if (n < 0)
 	{
 		write(fd, "-", 1);

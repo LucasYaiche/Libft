@@ -6,13 +6,13 @@
 /*   By: lyaiche <lyaiche@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 14:10:54 by lucasyaiche       #+#    #+#             */
-/*   Updated: 2021/10/14 16:38:08 by lyaiche          ###   ########.fr       */
+/*   Updated: 2021/10/21 12:20:24 by lyaiche          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, char *s2, size_t n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	while (*s1 && n && (*s1 == *s2))
 	{

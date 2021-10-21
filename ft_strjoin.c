@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucasyaiche <lucasyaiche@student.42.fr>    +#+  +:+       +#+        */
+/*   By: lyaiche <lyaiche@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 12:20:03 by lyaiche           #+#    #+#             */
-/*   Updated: 2021/10/19 17:23:32 by lucasyaiche      ###   ########.fr       */
+/*   Updated: 2021/10/21 12:33:47 by lyaiche          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*answer;
 	char	*returned;
 
+	if (!s1 || !s2)
+		return (NULL);
 	answer = get(ft_strlen(s1) + ft_strlen(s2));
 	returned = answer;
 	if (!answer)
