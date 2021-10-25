@@ -6,7 +6,7 @@
 /*   By: lyaiche <lyaiche@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 13:32:50 by lucasyaiche       #+#    #+#             */
-/*   Updated: 2021/10/16 15:02:27 by lyaiche          ###   ########.fr       */
+/*   Updated: 2021/10/25 13:19:47 by lyaiche          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (0);
 }
-/*
-int	main()
-{
-	void	*answer;
-	char	*s = "test1";
-	size_t	n;
-
-	n = 5;
-	answer = ft_memchr(s, 't', n);
-}
-*/

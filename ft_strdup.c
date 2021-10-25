@@ -6,7 +6,7 @@
 /*   By: lyaiche <lyaiche@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 15:35:24 by lyaiche           #+#    #+#             */
-/*   Updated: 2021/10/21 18:26:33 by lyaiche          ###   ########.fr       */
+/*   Updated: 2021/10/25 13:20:06 by lyaiche          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,12 +40,3 @@ char	*ft_strdup(const char	*s)
 	}
 	return (s2);
 }
-
-/*
-int main()
-{
-  char source[] = "GeeksForGeeks";
-  char *target = ft_strdup(source);
-  printf("%s", target);
-}
-*/

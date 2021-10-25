@@ -6,7 +6,7 @@
 /*   By: lyaiche <lyaiche@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 17:45:40 by lucasyaiche       #+#    #+#             */
-/*   Updated: 2021/10/14 16:36:31 by lyaiche          ###   ########.fr       */
+/*   Updated: 2021/10/25 13:19:25 by lyaiche          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,3 @@ int	ft_isalpha(int str)
 		return (0);
 	return (1);
 }
-
-/*
-int main()
-{
-   int x; 
-   x = 'a'; 
-   if (ft_isalpha(x))
-        printf("1"); 
-}
-*/
